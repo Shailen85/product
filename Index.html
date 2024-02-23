@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="products.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="navbarscript.js"></script>
+    <title>QQB-Products</title>
+  </head>
+  <body>
+    <div class="nav-body">
+        <nav>
+        <a class="logo1" href="#logo"></a>            
+        <a href="cart_and_checkout-main/cart_and_checkout-main/index1.html">Home</a>
+
+        <!-- <a href="#Adverts">Adverts</a> -->
+        <div class="dropdown-adverts">
+            <a href="#Adverts">Adverts <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-adds">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="DLF.html">Desginer Lable Fragrances</a>
+                <a href="WBM.html">Wheelie Bin Master</a>
+            </div>
+        </div>
+        
+        <a class="logo" href="#logo"></a>
+
+        <!-- <a href="DLF.html">Downloads</a> -->
+        <div class="dropdown-downloads">
+            <a href="#Adverts">Downloads <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-docs">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="Photos/Perfume/Brochure1.png"  target="_blank">DLF Brochure</a>
+                <a href="Photos/bins/wheelibinmaster-brochure.png" target="_blank">WBM Brochure</a>
+                <a href="Photos/Products/Clothing.png"  target="_blank">Clothing Brochure</a>
+            </div>
+        </div>
+        <a href="#contact">Products</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: whitesmoke">
+        &#9776;
+        </a>
+        </nav>
+    </div>
+
+    <div class="product-menu">
+        <header>
+            <div class="title">PRODUCT LIST</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        <div class="listProduct">
+            <!-- item -->
+        </div>
+    </div>    
+
+    <div class="product-menu">
+        <div class="product-heading"><h4>Perfumes</h4></div>
+        <div class="cosmetic-list">
+         
+            <div class="product" onclick="showDetails('product2.0')">
+                <img src="Photos/Products/dlfkit.png" alt="">
+                <p>Agent Kit</p>
+                <h2>Price: &#8658; &#8658; &#8658; </h2>
+            </div>
+            <div class="perfumeDLF" id="product2.0">
+                <h4>Item: DLFKIT</h4>
+                <p>Qty: 68 Samples</p>
+                <p>Size: 5ml per bottle</p>
+                <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information </p>
+            </div>
+         
+            <div class="product" onclick="showDetails('product2.1')">
+                <img src="Photos/Products/dlfmenbottle.png" alt="">
+                <p>Men Perfume</p>
+                <h2>37 Fragrances</h2>
+            </div>
+            <div class="perfumeDLF" id="product2.1">
+                <h4>Item: DLFMEN</h4>
+                <p>Prices: From R160</p>
+                <p>Size: 50ml</p>
+                <p>Fragrances: 37</p>
+                <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information. </p>
+                <p style="font-size: xx-small; color: rgba(7, 3, 230, 0.623);">Note: perfumes only sold in singles by agents. Contact via <a href="mailto:quoteandquickbuy@gmail.com">Email</a> or Whatsapp to find a agent near you</p>
+            </div>
+         
+            <div class="product" onclick="showDetails('product2.2')">
+                <img src="Photos/Products/dlfladiesbottle.png" alt="">
+                <p>Women Perfume</p>
+                <h2>31 Fragrances</h2>
+            </div>
+            <div class="perfumeDLF" id="product2.2">
+                <h4>Item: DLFLAD</h4>
+                <p>Price: From R185</p>
+                <p>Size: 50ml</p>
+                <p>Fragrances: 37</p>
+                <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information. </p>
+                <p style="font-size: xx-small; color: rgba(147, 3, 204, 0.644);">Note: perfumes only sold in singles by agents. Contact via <a href="mailto:quoteandquickbuy@gmail.com">Email</a> or Whatsapp to find a agent near you</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showDetails(productId) {
+            var productDetails = document.getElementById(productId);
+            if (productDetails.style.display === "none") {
+                productDetails.style.display = "block";
+            } else {
+                productDetails.style.display = "none";
+            }
+        }
+    </script>
+
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <form id="checkoutForm" action="/submit_cart" method="get">
+            <!-- Include input fields for name, email, address, etc. -->
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="address" placeholder="Address">
+            <!-- Hidden input field to store cart details -->
+            <input type="hidden" name="cart_data" id="cartData">
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="image/1.png" alt="">
+                    </div>
+                    <div class="name">
+                        name
+                    </div>
+                    <div class="totalPrice">
+                        R200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus"><</span>
+                        <span>1</span>
+                        <span class="plus">></span>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button type="submit" class="checkOut">Check Out</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+
+    <div class="social-links">
+        <div class="contact-links">
+            <h3>Contact</h3>
+            <a href=""><i class="fab fa-facebook"></i>  facebook</a>
+            <a href="https://wa.me/0817585515" target="_blank"><i class="fab fa-whatsapp"></i> 081 758 5515</a>
+            <a href=""><i class="fab fa-instagram"></i>  instagram</a>
+            <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i> QuoteandQuickBuy@gmail.com</a>
+            <a href="Index.html"><i class="fas fa-globe"></i> www.QuoteandQuickBuy.co.za</a>
+        </div>
+        <div class="advert-links">
+            <h3>Quick Links</h3>
+            <li><a href="DLF.html">Designer Label Fragrances</a></li>
+            <li><a href="WBM.html">Wheelie Bins Master</a></li>
+            <li><a href="Index.html">Home Page</a></li>
+            <h3>Downloads</h3>
+            <li><a href="Photos/Perfume/Brochure1.png" target="_blank">DLF Brochure</a></li>
+            <li><a href="Photos/bins/WBM brocher.png" target="_blank">WBM Brochure</a></li>
+            <li><a href="Photos/Products/Clothing.png" target="_blank">QQB Clothing Brochure</a></li>
+        </div>
+        <div class="address">
+            <h3>Address</h3>
+            <p>317 Rumite Road Celtisdale EXT 30 <br>
+                Raslouw Centurion <br>
+                Guateng <br>
+                South Africa <br>
+                1097
+            </p>
+        </div>
+        <div class="terms">
+            <img src="Photos/logos2.png" alt="">
+            <p>Quote & Quick Buy</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <a href="https://wa.me/0817585515" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <i class="fab fa-instagram"></i>
+                <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i></a>
+                <a href="Index.html"><i class="fas fa-globe"></i></a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Quote & Quick Buy QQB. All rights reserved. <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+            </footer>
+        </div>
+    </div>
+    
+  </body>
