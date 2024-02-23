@@ -118,9 +118,9 @@
         }
     </script>
 
-   <div class="cartTab">
+    <div class="cartTab">
         <h1>Shopping Cart</h1>
-        <form id="checkoutForm"  target="_blank" action="https://formsubmit.co/sshailenb@gmail.com" method="POST">
+        <form id="checkoutForm" action="/submit_cart" method="POST">
             <!-- Include input fields for name, email, address, etc. -->
             <input type="text" name="name" placeholder="Name">
             <input type="email" name="email" placeholder="Email">
@@ -130,7 +130,7 @@
             <div class="listCart">
                 <div class="item">
                     <div class="image">
-                        <img src="Photos/logos2/1.png" alt="">
+                        <img src="image/1.png" alt="">
                     </div>
                     <div class="name">
                         name
@@ -147,8 +147,8 @@
             </div>
             <div class="btn">
                 <button class="close">CLOSE</button>
+                <button class="checkOut">Check Out</button>
             </div>
-          <button type="submit" class="checkOut">Check Out</button>
         </form>
     </div>
     <script src="app.js"></script>
