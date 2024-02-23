@@ -118,46 +118,38 @@
         }
     </script>
 
-    <div class="cartTab">
-        <div class="container">
-            <h1>FormSubmit Demo</h1>
-            <form target="_blank" action="https://formsubmit.co/sshailenb@gmail.com" method="POST">
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                  </div>
-                  <div class="col">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                  </div>
-                </div>
-                <div class="listCart">
-                    <div class="item">
-                        <div class="image">
-                            <img src="image/1.png" alt="">
-                        </div>
-                        <div class="name">
-                            name
-                        </div>
-                        <div class="totalPrice">
-                            R200
-                        </div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>1</span>
-                            <span class="plus">></span>
-                        </div>
+   <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <form target="_blank" action="https://formsubmit.co/sshailenb@gmail.com" method="POST">
+            <!-- Include input fields for name, email, address, etc. -->
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="address" placeholder="Address">
+            <!-- Hidden input field to store cart details -->
+            <input type="hidden" name="cart_data" id="cartData">
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="image/1.png" alt="">
+                    </div>
+                    <div class="name">
+                        name
+                    </div>
+                    <div class="totalPrice">
+                        R200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus"><</span>
+                        <span>1</span>
+                        <span class="plus">></span>
                     </div>
                 </div>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-            </form>
-          </div>
-        <h1>Shopping Cart</h1>
-        <button class="close">CLOSE</button>
+            </div>
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button type="submit" class="checkOut">Check Out</button>
+            </div>
+        </form>
     </div>
     <script src="app.js"></script>
 
