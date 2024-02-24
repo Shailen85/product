@@ -93,38 +93,38 @@ const addCartToHTML = () => {
             listCartHTML.appendChild(newItem);
             newItem.innerHTML = `
             <div class="cartTab">
-            <h1>Shopping Cart</h1>
-            <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-                <!-- Include input fields for name, email, address, etc. -->
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="text" name="address" placeholder="Address">
-                <!-- Hidden input field to store cart details -->
-                <input type="hidden" name="cart_data" id="cartData">
-                <div class="listCart">
-                    <div class="item">
-                        <div class="image">
-                            <img src="${info.image}" alt="">
-                        </div>
-                        <div class="name">
-                        ${info.name}
-                        </div>
-                        <div class="totalPrice">
-                        ${info.price * item.quantity}
-                        </div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>${item.quantity}</span>
-                            <span class="plus">></span>
+                <h1>Shopping Cart</h1>
+                <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+                    <!-- Include input fields for name, email, address, etc. -->
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="address" placeholder="Address">
+                    <!-- Hidden input field to store cart details -->
+                    <input type="hidden" name="cart_data" id="cartData">
+                    <div class="listCart">
+                        <div class="item">
+                            <div class="image">
+                                <img src="${info.image}" alt="">
+                            </div>
+                            <div class="name">
+                            ${info.name}
+                            </div>
+                            <div class="totalPrice">
+                            ${info.price * item.quantity}
+                            </div>
+                            <div class="quantity">
+                                <span class="minus"><</span>
+                                <span>${item.quantity}</span>
+                                <span class="plus">></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="btn">
-                    <button class="close">CLOSE</button>
-                    <button type="submit" class="checkOut">Submit</button>
-                </div>
-            </form>
-        </div>
+                    <div class="btn">
+                        <button class="close">CLOSE</button>
+                        <button type="submit" class="checkOut">Submit</button>
+                    </div>
+                </form>
+            </div>
                 // <div class="image">
                 //     <img src="${info.image}">
                 // </div>
