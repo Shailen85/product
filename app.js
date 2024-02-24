@@ -97,17 +97,17 @@ const addCartToHTML = () => {
             <div class="listCart">
                 <div class="item">
                     <div class="image">
-                        <img src="${product.image}" alt="">
+                        <img src="${info.image}" alt="">
                     </div>
                     <div class="name">
-                    ${product.name}
+                    ${info.name}
                     </div>
                     <div class="totalPrice">
-                    ${product.price}
+                    ${info.price * item.quantity}
                     </div>
                     <div class="quantity">
                         <span class="minus"><</span>
-                        <span>1</span>
+                        <span>${item.quantity}</span>
                         <span class="plus">></span>
                     </div>
                 </div>
