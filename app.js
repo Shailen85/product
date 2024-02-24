@@ -104,6 +104,10 @@ const addCartToHTML = () => {
                 <span>${item.quantity}</span>
                 <span class="plus">></span>
             </div>
+            <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="check">Check</button>
+            </div>
             `;
         });
     }
