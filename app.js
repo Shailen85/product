@@ -95,11 +95,11 @@ const addCartToHTML = () => {
             <div class="cartTab">
                 <h1>Shopping Cart</h1>
                 <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-                    <!-- Include input fields for name, email, address, etc. -->
-                    <input type="text" name="name" placeholder="Name">
-                    <input type="email" name="email" placeholder="Email">
-                    <input type="text" name="address" placeholder="Address">
-                    <!-- Hidden input field to store cart details -->
+                    // <!-- Include input fields for name, email, address, etc. -->
+                    // <input type="text" name="name" placeholder="Name">
+                    // <input type="email" name="email" placeholder="Email">
+                    // <input type="text" name="address" placeholder="Address">
+                    // <!-- Hidden input field to store cart details -->
                     <input type="hidden" name="cart_data" id="cartData">
                     <div class="listCart">
                         <div class="item">
