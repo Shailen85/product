@@ -120,6 +120,24 @@
 
     <div class="cartTab">
         <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="image/1.png" alt="">
+                </div>
+                <div class="name">
+                    name
+                </div>
+                <div class="totalPrice">
+                    R200
+                </div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>1</span>
+                    <span class="plus">></span>
+                </div>
+            </div>
+        </div>
         <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
             <!-- Include input fields for name, email, address, etc. -->
             <input type="text" name="name" placeholder="Name">
@@ -127,24 +145,6 @@
             <input type="text" name="address" placeholder="Address">
             <!-- Hidden input field to store cart details -->
             <input type="hidden" name="cart_data" id="cartData">
-            <div class="listCart">
-                <div class="item">
-                    <div class="image">
-                        <img src="image/1.png" alt="">
-                    </div>
-                    <div class="name">
-                        name
-                    </div>
-                    <div class="totalPrice">
-                        R200
-                    </div>
-                    <div class="quantity">
-                        <span class="minus"><</span>
-                        <span>1</span>
-                        <span class="plus">></span>
-                    </div>
-                </div>
-            </div>
             <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
         </form>
     </div>
