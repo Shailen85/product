@@ -119,37 +119,29 @@
     </script>
 
     <div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-            <!-- Include input fields for name, email, address, etc. -->
-<!--             <input type="text" name="name" placeholder="Name">
-            <input type="email" name="email" placeholder="Email">
-            <input type="text" name="address" placeholder="Address"> -->
-            <!-- Hidden input field to store cart details -->
-            <input type="hidden" name="cart_data" id="cartData">
-            <div class="listCart">
-                <div class="item">
-                    <div class="image">
-                        <img src="Photos/Products/yelkg.png" alt="">
-                    </div>
-                    <div class="name">
-                        name
-                    </div>
-                    <div class="totalPrice">
-                        R200
-                    </div>
-                    <div class="quantity">
-                        <span class="minus"><</span>
-                        <span>1</span>
-                        <span class="plus">></span>
-                    </div>
+    <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="Photos/Products/yelkg.png" alt="">
+                </div>
+                <div class="name">
+                    name
+                </div>
+                <div class="totalPrice">
+                    R200
+                </div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>1</span>
+                    <span class="plus">></span>
                 </div>
             </div>
-            <div class="btn">
-                <button class="close">CLOSE</button>
-                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-            </div> 
-        </form>
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+        </div> 
     </div>
     <script src="app.js"></script>
 
