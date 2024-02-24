@@ -97,13 +97,13 @@ const addCartToHTML = () => {
             <div class="listCart">
                 <div class="item">
                     <div class="image">
-                        <img src="image/1.png" alt="">
+                        <img src="${product.image}" alt="">
                     </div>
                     <div class="name">
-                        name
+                    ${product.name}
                     </div>
                     <div class="totalPrice">
-                        R200
+                    ${product.price}
                     </div>
                     <div class="quantity">
                         <span class="minus"><</span>
