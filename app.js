@@ -13,10 +13,10 @@ iconCart.addEventListener('click', () => {
 });
 
 // Close cart
-checkoutForm.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent default form submission
-    body.classList.toggle('showCart');
-});
+// checkoutForm.addEventListener('click', (event) => {
+//     event.preventDefault(); // Prevent default form submission
+//     body.classList.toggle('showCart');
+// });
 
 // Add product data to HTML
 const addDataToHTML = () => {
