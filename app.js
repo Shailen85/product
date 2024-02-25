@@ -94,7 +94,7 @@ const addCartToHTML = () => {
             newItem.innerHTML = `
             <div class="image">
                 <img src="${info.image}">
-            </div>
+                </div>
             <div class="name">
                 ${info.name}
             </div>
@@ -103,10 +103,6 @@ const addCartToHTML = () => {
                 <span class="minus"><</span>
                 <span>${item.quantity}</span>
                 <span class="plus">></span>
-            </div>
-            <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="check">Check</button>
             </div>
             `;
         });
