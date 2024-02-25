@@ -13,10 +13,10 @@ iconCart.addEventListener('click', () => {
 });
 
 // Close cart
-// checkoutForm.addEventListener('click', (event) => {
-//     event.preventDefault(); // Prevent default form submission
-//     body.classList.toggle('showCart');
-// });
+checkoutForm.addEventListener('click', () => {
+    event.preventDefault(); // Prevent default form submission
+    body.classList.toggle('showCart');
+});
 
 // Add product data to HTML
 const addDataToHTML = () => {
@@ -38,7 +38,7 @@ const addDataToHTML = () => {
                     <p style="font-size: smaller;">${product.info}</p>
                 </div>
                 <button class="addCart">Add To Cart</button>`;
-            listProductHTML.appendChild(newProduct);
+                listProductHTML.appendChild(newProduct);
         });
     }
 };
@@ -93,17 +93,17 @@ const addCartToHTML = () => {
             listCartHTML.appendChild(newItem);
             newItem.innerHTML = `
             <div class="image">
-                <img src="${info.image}">
+                    <img src="${info.image}">
                 </div>
-            <div class="name">
+                <div class="name">
                 ${info.name}
-            </div>
-            <div class="totalPrice">$${info.price * item.quantity}</div>
-            <div class="quantity">
-                <span class="minus"><</span>
-                <span>${item.quantity}</span>
-                <span class="plus">></span>
-            </div>
+                </div>
+                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>${item.quantity}</span>
+                    <span class="plus">></span>
+                </div>
             `;
         });
     }
