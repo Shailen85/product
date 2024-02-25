@@ -13,7 +13,8 @@ iconCart.addEventListener('click', () => {
 });
 
 // Close cart
-checkoutForm.addEventListener('click', () => {
+checkoutForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission
     body.classList.toggle('showCart');
 });
 
@@ -37,7 +38,7 @@ const addDataToHTML = () => {
                     <p style="font-size: smaller;">${product.info}</p>
                 </div>
                 <button class="addCart">Add To Cart</button>`;
-                listProductHTML.appendChild(newProduct);
+            listProductHTML.appendChild(newProduct);
         });
     }
 };
@@ -91,11 +92,11 @@ const addCartToHTML = () => {
             let info = products[positionProduct];
             listCartHTML.appendChild(newItem);
             newItem.innerHTML = `
-            <div class="image">
+                <div class="image">
                     <img src="${info.image}">
                 </div>
                 <div class="name">
-                ${info.name}
+                    ${info.name}
                 </div>
                 <div class="totalPrice">$${info.price * item.quantity}</div>
                 <div class="quantity">
