@@ -14,7 +14,6 @@ iconCart.addEventListener('click', () => {
 
 // Close cart
 checkoutForm.addEventListener('click', () => {
-    event.preventDefault(); // Prevent default form submission
     body.classList.toggle('showCart');
 });
 
