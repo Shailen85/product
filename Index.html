@@ -8,6 +8,8 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
     <script src="navbarscript.js"></script>
     <title>QQB-Products</title>
   </head>
@@ -58,31 +60,6 @@
         </header>
         <div class="listProduct">
             <!-- item -->
-        </div>
-    </div>    
-<div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <div class="listCart">
-            <div class="item">
-                <div class="image">
-                    <img src="image/1.png" alt="">
-                </div>
-                <div class="name">
-                    name
-                </div>
-                <div class="totalPrice">
-                    R200
-                </div>
-                <div class="quantity">
-                    <span class="minus"><</span>
-                    <span>1</span>
-                    <span class="plus">></span>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="checkOut">Check Out</button>
         </div>
     </div>    
 
@@ -143,30 +120,74 @@
         }
     </script>
 
+
+    <div class="container">
+        <div class="cartTab">
+            <h1>Shopping Cart</h1>
+            <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+                <!-- Include input fields for name, email, address, etc. -->
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="address" placeholder="Address">
+                <!-- Hidden input field to store cart details -->
+                <input type="hidden" name="cart_data" id="cartData">
+                <div class="listCart">
+                    <div class="item">
+                        <div class="image">
+                            <img src="image/1.png" alt="">
+                        </div>
+                        <div class="name">
+                            name
+                        </div>
+                        <div class="totalPrice">
+                            R200
+                        </div>
+                        <div class="quantity">
+                            <span class="minus"><</span>
+                            <span>1</span>
+                            <span class="plus">></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button class="close">CLOSE</button>
+                    <button type="submit" class="checkOut">Check Out</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <div class="cartTab">
         <h1>Shopping Cart</h1>
-        <div class="listCart">
-            <div class="item">
-                <div class="image">
-                    <img src="Photos/Products/yelkg.png" alt="">
-                </div>
-                <div class="name">
-                    name
-                </div>
-                <div class="totalPrice">
-                    R200
-                </div>
-                <div class="quantity">
-                    <span class="minus"><</span>
-                    <span>1</span>
-                    <span class="plus">></span>
+        <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
+            <!-- Include input fields for name, email, address, etc. -->
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="address" placeholder="Address">
+            <!-- Hidden input field to store cart details -->
+            <input type="hidden" name="cart_data" id="cartData">
+            <div class="listCart">
+                <div class="item">
+                    <div class="image">
+                        <img src="image/1.png" alt="">
+                    </div>
+                    <div class="name">
+                        name
+                    </div>
+                    <div class="totalPrice">
+                        R200
+                    </div>
+                    <div class="quantity">
+                        <span class="minus"><</span>
+                        <span>1</span>
+                        <span class="plus">></span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="check">Check</button>
-        </div> 
+            <div class="btn">
+                <button class="close">CLOSE</button>
+                <button type="submit" class="checkOut">Check Out</button>
+            </div>
+        </form>
     </div>
     <script src="app.js"></script>
 
