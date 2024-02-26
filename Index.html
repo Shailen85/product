@@ -121,54 +121,20 @@
     </script>
 
 
-    <div class="container">
-        <div class="cartTab">
-            <h1>Shopping Cart</h1>
-            <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-                <!-- Include input fields for name, email, address, etc. -->
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="text" name="address" placeholder="Address">
-                <!-- Hidden input field to store cart details -->
-                <input type="hidden" name="cart_data" id="cartData">
-                <div class="listCart">
-                    <div class="item">
-                        <div class="image">
-                            <img src="Photos/Products/grekg.png" alt="">
-                        </div>
-                        <div class="name">
-                            name
-                        </div>
-                        <div class="totalPrice">
-                            R200
-                        </div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>1</span>
-                            <span class="plus">></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn">
-                    <button class="close">CLOSE</button>
-                    <button type="submit" class="checkOut">Check Out</button>
-                </div>
-            </form>
-        </div>
-    </div>
     <div class="cartTab">
         <h1>Shopping Cart</h1>
         <form id="checkoutForm" target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-            <!-- Include input fields for name, email, address, etc. -->
-            <input type="text" name="name" placeholder="Name">
+            <!-- <input type="text" name="name" placeholder="Name">
             <input type="email" name="email" placeholder="Email">
-            <input type="text" name="address" placeholder="Address">
-            <!-- Hidden input field to store cart details -->
-            <input type="hidden" name="cart_data" id="cartData">
-            <div class="listCart">
+            <input type="text" name="address" placeholder="Address"> -->
+            <!-- <input type="hidden" name="cart_data" id="cartData"> -->
+            <!-- <button type="submit" class="btn btn-lg btn-dark btn-block">Check Out</button> -->
+        </form>
+        <input type="hidden" name="cart_data" id="cartData">
+            <div class="listCart" style="height: 500px; margin-top: -550px;">
                 <div class="item">
                     <div class="image">
-                        <img src="image/1.png" alt="">
+                        <img src="Photos/Products/grekg.png" alt="">
                     </div>
                     <div class="name">
                         name
@@ -184,14 +150,66 @@
                 </div>
             </div>
             <div class="btn">
-                <button type="submit" class="checkOut">Check Out</button>
+                <a href="#email_quote"><button class="close">Email Quote</button></a>
+                <!-- <button type="submit" class="checkOut">Check Out</button> -->
             </div>
-        </form>
-        <div class="btn">
-            <button class="close">CLOSE</button>
-        </div>
     </div>
+
     <script src="app.js"></script>
+
+    <!-- <script>
+                // Function to populate cart data into the hidden input field
+                const populateCartData = () => {
+                    document.getElementById('cartData').value = JSON.stringify(cart);
+                }
+    
+                // Update addCartToHTML function to populate cart data on every change
+                const addCartToHTML = () => {
+                // Same as before...
+    
+                // Populate cart data into hidden input field
+                    populateCartData();
+                }
+    
+                // Add event listener to form submission
+                document.getElementById('checkoutForm').addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+    
+                    // Gather form data
+                    const formData = new FormData(event.target);
+    
+                    // Send form data to backend server (you need to implement this)
+                    fetch('/submit_cart', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            // Clear cart and display success message or redirect user
+                            cart = [];
+                            addCartToHTML(); // Update cart display
+                            alert('Order placed successfully!'); // Display success message
+                        } else {
+                            throw new Error('Error submitting order');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('There was an error processing your order. Please try again later.');
+                    });
+                });
+            </script> -->
+
+    <div id="email_quote" class="container" style="margin-top: 20%;">
+        <form id="checkoutForm" target="_blank" action="https://formsubmit.co/sshailenb@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="address" placeholder="Address">
+            <input type="hidden" name="cart_data" id="cartData">
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Check Out</button>
+        </form>
+
+    </div>
 
     <div class="social-links">
         <div class="contact-links">
