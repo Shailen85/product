@@ -1,30 +1,31 @@
-let listProductHTML = document.querySelector('.listProduct');
-let listCartHTML = document.querySelector('.listCart');
-let iconCart = document.querySelector('.icon-cart');
-let iconCartSpan = document.querySelector('.icon-cart span');
-let body = document.querySelector('body');
-let checkoutForm = document.getElementById('checkoutForm');
+// Selecting necessary elements
+const listProductHTML = document.querySelector('.listProduct');
+const listCartHTML = document.querySelector('.listCart');
+const iconCart = document.querySelector('.icon-cart');
+const iconCartSpan = document.querySelector('.icon-cart span');
+const body = document.querySelector('body');
+const checkoutForm = document.getElementById('checkoutForm');
 let products = [];
 let cart = [];
 
-// Toggle cart visibility
+// Function to toggle cart visibility
 iconCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-// Close cart
+// Function to close cart
 checkoutForm.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-// Add product data to HTML
+// Function to add product data to HTML
 const addDataToHTML = () => {
     if (products.length > 0) {
         products.forEach(product => {
             let newProduct = document.createElement('div');
             newProduct.dataset.id = product.id;
             newProduct.classList.add('item');
-            newProduct.innerHTML = 
+            newProduct.innerHTML =
                 `<div class="product" onclick="showDetails('${product.id}')">
                     <img src="${product.image}" alt="">
                     <h2>${product.name}</h2>
@@ -42,7 +43,7 @@ const addDataToHTML = () => {
     }
 };
 
-// Add product to cart
+// Function to add product to cart
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('addCart')) {
@@ -51,7 +52,7 @@ listProductHTML.addEventListener('click', (event) => {
     }
 });
 
-// Add product to cart logic
+// Function to add product to cart logic
 const addToCart = (product_id) => {
     let positionThisProductInCart = cart.findIndex((value) => value.product_id == product_id);
     if (cart.length <= 0) {
@@ -71,29 +72,25 @@ const addToCart = (product_id) => {
     addCartToMemory();
 };
 
-// Add cart data to local storage
+// Function to add cart data to local storage
 const addCartToMemory = () => {
     localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-// Update cart display
+// Function to update cart display
 const addCartToHTML = () => {
     listCartHTML.innerHTML = '';
     let totalQuantity = 0;
     if (cart.length > 0) {
         cart.forEach(item => {
-            totalQuantity = totalQuantity +  item.quantity;
+            totalQuantity += item.quantity;
             let newItem = document.createElement('div');
             newItem.classList.add('item');
             newItem.dataset.id = item.product_id;
-
             let positionProduct = products.findIndex((value) => value.id == item.product_id);
             let info = products[positionProduct];
             listCartHTML.appendChild(newItem);
             newItem.innerHTML = `
-            <input type="hidden" name="cart_data" id="cartData" value="${info.name}">
-            <input type="hidden" name="cart_data" id="cartData" value="${info.price}">
-            <input type="hidden" name="cart_data" id="cartData" value="${item.quantity}">
                 <div class="image">
                     <img src="${info.image}">
                 </div>
@@ -112,7 +109,7 @@ const addCartToHTML = () => {
     iconCartSpan.innerText = totalQuantity;
 };
 
-// Change quantity of items in cart
+// Function to change quantity of items in cart
 listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
     if (positionClick.classList.contains('minus') || positionClick.classList.contains('plus')) {
@@ -125,7 +122,7 @@ listCartHTML.addEventListener('click', (event) => {
     }
 });
 
-// Change quantity of items in cart logic
+// Function to change quantity of items in cart logic
 const changeQuantityCart = (product_id, type) => {
     let positionItemInCart = cart.findIndex((value) => value.product_id == product_id);
     if (positionItemInCart >= 0) {
@@ -148,7 +145,7 @@ const changeQuantityCart = (product_id, type) => {
     addCartToMemory();
 };
 
-// Initialize the application
+// Function to initialize the application
 const initApp = () => {
     fetch('products.json')
     .then(response => response.json())
@@ -162,4 +159,48 @@ const initApp = () => {
     });
 };
 
+// Event listener for form submission
+checkoutForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    // Get form data
+    const formData = {
+        name: checkoutForm.elements['name'].value,
+        email: checkoutForm.elements['email'].value,
+        address: checkoutForm.elements['address'].value,
+        cartData: cart.map(item => {
+            const product = products.find(prod => prod.id === item.product_id);
+            return {
+                name: product.name,
+                price: product.price,
+                quantity: item.quantity
+            };
+        })
+    };
+    // Send email with form data
+    sendEmail(formData);
+});
+
+// Function to send email
+const sendEmail = (formData) => {
+    // Implement sending email logic here
+    // You can use a service like Nodemailer for server-side email sending
+    // Here, you can use JavaScript to send an email via AJAX or fetch
+    // Example:
+    fetch('https://sshailenb@gamil.com/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => {
+        // Handle response (e.g., show success message)
+    })
+    .catch(error => {
+        console.error('Error sending email:', error);
+        // Handle error (e.g., show error message)
+    });
+};
+
+// Initialize the application
 initApp();
