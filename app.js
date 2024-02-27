@@ -13,8 +13,7 @@ iconCart.addEventListener('click', () => {
 });
 
 // Close cart
-checkoutForm.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
+checkoutForm.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
@@ -92,6 +91,9 @@ const addCartToHTML = () => {
             let info = products[positionProduct];
             listCartHTML.appendChild(newItem);
             newItem.innerHTML = `
+            <input type="hidden" name="cart_data" id="cartData" value="${info.name}">
+            <input type="hidden" name="cart_data" id="cartData" value="${info.price}">
+            <input type="hidden" name="cart_data" id="cartData" value="${item.quantity}">
                 <div class="image">
                     <img src="${info.image}">
                 </div>
