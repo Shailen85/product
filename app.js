@@ -183,7 +183,7 @@ checkoutForm.addEventListener('submit', (event) => {
 // Function to send email with form data
 const sendEmail = (formData) => {
     // Example of sending email using fetch API
-    fetch('your-email-service-endpoint', {
+    fetch('https://formsubmit.co/3cdb01eb17a7bba740571f146ae9b9c0', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
