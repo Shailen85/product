@@ -170,8 +170,8 @@ checkoutForm.addEventListener('submit', (event) => {
         cartData: cart.map(item => {
             const product = products.find(prod => prod.id === item.product_id);
             return {
-                name: product.name,
-                price: product.price,
+                name: product ? product.name : "Product Name Not Found", // Handle potential undefined product
+                price: product ? product.price : 0, // Handle potential undefined product
                 quantity: item.quantity
             };
         })
@@ -180,27 +180,29 @@ checkoutForm.addEventListener('submit', (event) => {
     sendEmail(formData);
 });
 
-// Function to send email
+// Function to send email with form data
 const sendEmail = (formData) => {
-    // Implement sending email logic here
-    // You can use a service like Nodemailer for server-side email sending
-    // Here, you can use JavaScript to send an email via AJAX or fetch
-    // Example:
-    fetch('https://sshailenb@gamil.com/send-email', {
+    // Example of sending email using fetch API
+    fetch('your-email-service-endpoint', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
     })
     .then(response => {
-        // Handle response (e.g., show success message)
+        if (!response.ok) {
+            throw new Error('Failed to send email');
+        }
+        console.log('Email sent successfully');
+        // Optionally, you can perform additional actions after successful email sending
     })
     .catch(error => {
-        console.error('Error sending email:', error);
-        // Handle error (e.g., show error message)
+        console.error('Error sending email:', error.message);
+        // Optionally, you can handle errors or display error messages to the user
     });
 };
+
 
 // Initialize the application
 initApp();
