@@ -178,6 +178,16 @@
         "color": "Gry",
         "size": "1100LT",
         "info": "Price excludes vat and delivery. Vist Advert: <a href='WBM.html'>Wheelie Bin Master</a> for more information. <a href=,mailto:wheeliebinmaster@gmail.com, quoteandquickbuy@gmail.com'>Email</a> or Whatsapp to place order or get a Quote"
+    },
+    {
+        "ida": 19,
+        "name":"Agent Kit",
+        "price": 1500,
+        "image": "Photos/Products/dlfkit.png",
+        "items": "DLFKIT",
+        "color": "None",
+        "size": "37 Fragances",
+        "info": "Price excludes vat and delivery. Vist Advert: <a href='WBM.html'>Wheelie Bin Master</a> for more information. <a href=,mailto:wheeliebinmaster@gmail.com, quoteandquickbuy@gmail.com'>Email</a> or Whatsapp to place order or get a Quote"
     }
 
 ]

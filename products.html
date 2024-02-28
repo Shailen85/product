@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="products.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link href="style.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="navbarscript.js"></script>
@@ -15,7 +15,7 @@
     <div class="nav-body">
         <nav>
         <a class="logo1" href="#logo"></a>            
-        <a href="cart_and_checkout-main/cart_and_checkout-main/index1.html">Home</a>
+        <a href="Index.html">Home</a>
 
         <!-- <a href="#Adverts">Adverts</a> -->
         <div class="dropdown-adverts">
@@ -45,44 +45,114 @@
         </a>
         </nav>
     </div>
-
-    <div class="product-menu">
-        <header>
-            <div class="title">PRODUCT LIST</div>
-            <div class="icon-cart">
-                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
-                </svg>
-                <span>0</span>
-            </div>
-        </header>
-        <div class="listProduct">
-            <!-- item -->
+    <div class="container">
+        <div class="title">PRODUCT LIST</div>
+        <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+            </svg>
+            <span>0</span>
         </div>
-    </div>    
-
-    <div class="product-menu">
-        <div class="product-heading"><h4>Perfumes</h4></div>
-        <div class="cosmetic-list">
-         
+    </div>
+    <div class="listProduct">
+        <!-- <div class="product-heading"><h4>Clothing</h4></div> -->
+        <!-- <div class="product-info">
+            
+            <div class="product" onclick="showDetails('product1.0')">
+                <img src="Photos/Products/yelkg.png" alt="">
+                <p>Yellow Kiddies Golfers</p>
+                <h2>Price: R120</h2>
+            </div>
+            <div class="product-details" id="product1.0">
+                <h4>Item: YELKG</h4>
+                <p>Price: R120</p>
+                <p>Color: Yellow</p>
+                <p>Size: 5 to 12 years</p>
+                <p style="font-size: smaller;">Price does not include delivery. Discount of 10% for orders 10 or more. <br> <a href="mailto:quoteandquickbuy@gmail.com">Email</a> to place order or quote.</p>
+            </div>
+            
+            <div class="product" onclick="showDetails('product1.1')">
+                <img src="Photos/Products/blukg.png" alt="">
+                <p>Blue kiddies golfers</p>
+                <h2>Price: R120</h2>
+            </div>
+            <div class="product-details" id="product1.1">
+                <h4>Item: BLUKG</h4>
+                <p>Price: R120</p>
+                <p>Color: Blue</p>
+                <p>Size: 5 to 12 years</p>
+                <p style="font-size: smaller;">Price does not include delivery. Discount of 10% for orders 10 or more. <br> <a href="mailto:quoteandquickbuy@gmail.com">Email</a> to place order or quote.</p>
+            </div>
+            
+            <div class="product" onclick="showDetails('product1.2')">
+                <img src="Photos/Products/grekg.png" alt="">
+                <p>Green kiddies golfers</p>
+                <h2>Price: R120</h2>
+            </div>
+            <div class="product-details" id="product1.2">
+                <h4>Item: GREKG</h4>
+                <p>Price: R120</p>
+                <p>Color: Green</p>
+                <p>Size: 5 to 12 years</p>
+                <p style="font-size: smaller;">Price does not include delivery. Discount of 10% for orders 10 or more. <br> <a href="mailto:quoteandquickbuy@gmail.com">Email</a> to place order or quote.</p>
+            </div>
+            
+            <div class="product" onclick="showDetails('product1.3')">
+                <img src="Photos/Products/redkh.png" alt="">
+                <p>Red Sports Hats</p>
+                <h2>Price: R100</h2>
+            </div>
+            <div class="product-details" id="product1.3">
+                <h4>Item: REDKH</h4>
+                <p>Price: R100</p>
+                <p>Color: Red</p>
+                <p>Size: All ages adjusted</p>
+                <p style="font-size: smaller;">Price does not include delivery. Discount of 10% for orders 10 or more. <br> <a href="mailto:quoteandquickbuy@gmail.com">Email</a> to place order or quote.</p>
+            </div>
+        </div> -->
+        <!-- <button class="addCart">Add To Cart</button> -->
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <!-- <div class="image">
+                <img src="${info.image}">
+            </div>
+            <div class="name">${info.name}</div>
+            <div class="totalPrice">$${info.price * item.quantity}</div>
+            <div class="quantity">
+                <span class="minus"><</span>
+                <span>${item.quantity}</span>
+                <span class="plus">></span>
+            </div> -->
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+        <!-- --------------------------------- -->
+        <!-- <div class="product-heading"><h4>Perfumes</h4></div> -->
+        <!-- <div class="cosmetic-list">
+            
             <div class="product" onclick="showDetails('product2.0')">
                 <img src="Photos/Products/dlfkit.png" alt="">
                 <p>Agent Kit</p>
                 <h2>Price: &#8658; &#8658; &#8658; </h2>
             </div>
-            <div class="perfumeDLF" id="product2.0">
+            <div class="product-details" id="product2.0">
                 <h4>Item: DLFKIT</h4>
                 <p>Qty: 68 Samples</p>
                 <p>Size: 5ml per bottle</p>
                 <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information </p>
             </div>
-         
+            
             <div class="product" onclick="showDetails('product2.1')">
                 <img src="Photos/Products/dlfmenbottle.png" alt="">
                 <p>Men Perfume</p>
                 <h2>37 Fragrances</h2>
             </div>
-            <div class="perfumeDLF" id="product2.1">
+            <div class="product-details" id="product2.1">
                 <h4>Item: DLFMEN</h4>
                 <p>Prices: From R160</p>
                 <p>Size: 50ml</p>
@@ -90,13 +160,13 @@
                 <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information. </p>
                 <p style="font-size: xx-small; color: rgba(7, 3, 230, 0.623);">Note: perfumes only sold in singles by agents. Contact via <a href="mailto:quoteandquickbuy@gmail.com">Email</a> or Whatsapp to find a agent near you</p>
             </div>
-         
+            
             <div class="product" onclick="showDetails('product2.2')">
                 <img src="Photos/Products/dlfladiesbottle.png" alt="">
                 <p>Women Perfume</p>
                 <h2>31 Fragrances</h2>
             </div>
-            <div class="perfumeDLF" id="product2.2">
+            <div class="product-details" id="product2.2">
                 <h4>Item: DLFLAD</h4>
                 <p>Price: From R185</p>
                 <p>Size: 50ml</p>
@@ -104,9 +174,8 @@
                 <p style="font-size: smaller;">Vist Advert: <a href="DLF.html">Designer Label Fragrances</a> for more information. </p>
                 <p style="font-size: xx-small; color: rgba(147, 3, 204, 0.644);">Note: perfumes only sold in singles by agents. Contact via <a href="mailto:quoteandquickbuy@gmail.com">Email</a> or Whatsapp to find a agent near you</p>
             </div>
-        </div>
+        </div> -->
     </div>
-
     <script>
         function showDetails(productId) {
             var productDetails = document.getElementById(productId);
@@ -117,38 +186,13 @@
             }
         }
     </script>
-
-    <div class="cartTab">
-        <h1>Shopping Cart</h1>
-        <div class="listCart">
-            <div class="item">
-                <div class="image">
-                    <img src="image/1.png" alt="">
-                </div>
-                <div class="name">
-                    name
-                </div>
-                <div class="totalPrice">
-                    R200
-                </div>
-                <div class="quantity">
-                    <span class="minus"><</span>
-                    <span>1</span>
-                    <span class="plus">></span>
-                </div>
-            </div>
-        </div>
-        <div class="btn">
-            <button class="close">CLOSE</button>
-            <button class="checkOut">Check Out</button>
-        </div>
-    </div>
     <script src="app.js"></script>
+    </div>
     <div class="social-links">
         <div class="contact-links">
             <h3>Contact</h3>
             <a href=""><i class="fab fa-facebook"></i>  facebook</a>
-            <a href="https://wa.me/0817585515" target="_blank"><i class="fab fa-whatsapp"></i> 081 758 5515</a>
+            <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i> 079 882 8706</a>
             <a href=""><i class="fab fa-instagram"></i>  instagram</a>
             <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i> QuoteandQuickBuy@gmail.com</a>
             <a href="Index.html"><i class="fas fa-globe"></i> www.QuoteandQuickBuy.co.za</a>
@@ -177,7 +221,7 @@
             <p>Quote & Quick Buy</p>
             <div class="social-icons">
                 <i class="fab fa-facebook"></i>
-                <a href="https://wa.me/0817585515" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <i class="fab fa-instagram"></i>
                 <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i></a>
                 <a href="Index.html"><i class="fas fa-globe"></i></a>
