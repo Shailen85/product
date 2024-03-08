@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="getQuote.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="navbarscript.js"></script>
+    <title>QQB-Get Quote</title>
+</head>
+<body>
+    <div class="nav-body">
+        <nav>
+        <a class="logo1" href="#logo"></a>            
+        <a href="Index.html">Home</a>
+
+        <!-- <a href="#Adverts">Adverts</a> -->
+        <div class="dropdown-adverts">
+            <a href="#Adverts">Adverts <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-adds">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="DLF.html">Desginer Lable Fragrances</a>
+                <a href="WBM.html">Wheelie Bin Master</a>
+            </div>
+        </div>
+        
+        <a class="logo" href="#logo"></a>
+
+        <!-- <a href="DLF.html">Downloads</a> -->
+        <div class="dropdown-downloads">
+            <a href="#Adverts">Downloads <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-docs">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="Photos/Perfume/Brochure1.png"  target="_blank">DLF Brochure</a>
+                <a href="Photos/bins/wheelibinmaster-brochure.png" target="_blank">WBM Brochure</a>
+                <a href="Photos/Products/Clothing.png"  target="_blank">Clothing Brochure</a>
+            </div>
+        </div>
+        <a href="Products.html">Products</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: whitesmoke">
+        &#9776;
+        </a>
+        </nav>
+    </div>
+    <h1>GET QUOTE</h1>
+    <div id="checkoutData">
+        <!-- <form target="_blank" action="https://formsubmit.co/3cdb01eb17a7bba740571f146ae9b9c0" method="POST">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <Label for="name">Your Name</Label>
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" value="${formData.name}">
+                    </div>
+                    <div class="col">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" value="${formData.email}">
+                    </div>
+                    <div class="col">
+                        <label for="message">Shipping Address / Message</label>
+                        <textarea placeholder="Shipping Address" class="form-control" name="message" rows="5" required>${formData.address}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="order">Your Order</label>
+                <textarea placeholder="Your Message" class="form-control" name="order" rows="10" required>${formData.list}</textarea>
+            </div>
+            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+        </form> -->
+    </div>
+
+    <script>
+        // Retrieve form data from localStorage
+        let formData = JSON.parse(localStorage.getItem('formData'));
+        let test = JSON.parse(localStorage.getItem('cart'));
+
+        // Display form data
+        if (formData) {
+            let checkoutDataDiv = document.getElementById('checkoutData');
+            checkoutDataDiv.innerHTML = `
+            <form target="_blank" action="https://formsubmit.co/3cdb01eb17a7bba740571f146ae9b9c0" method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="name">
+                            <Label for="name">Your Name:</Label>
+                            <input type="text" name="name" class="form-control" placeholder="Name" value="${formData.name}">
+                        </div>
+                        <div class="email">
+                            <label for="email">Email Address:</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" value="${formData.email}">
+                            <p>Note: Confirm email address is correct before submitting</p>
+                        </div>
+                        <div class="message">
+                            <label for="message">Shipping Address / Message</label><br>
+                            <textarea placeholder="Shipping Address / Message" class="form-control" name="message" rows="5" required>${formData.address}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="order">
+                    <label for="order">Your Order</label><br>
+                    <textarea placeholder="Your Message" class="form-control" name="order" rows="10" required>${formData.list}</textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            </form>
+            `;
+        }
+    </script>
+
+<div class="social-links">
+    <div class="contact-links">
+        <h3>Contact</h3>
+        <a href=""><i class="fab fa-facebook"></i>  facebook</a>
+        <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i> 079 882 8706</a>
+        <a href=""><i class="fab fa-instagram"></i>  instagram</a>
+        <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i> QuoteandQuickBuy@gmail.com</a>
+        <a href="Index.html"><i class="fas fa-globe"></i> www.QuoteandQuickBuy.co.za</a>
+    </div>
+    <div class="advert-links">
+        <h3>Quick Links</h3>
+        <li><a href="DLF.html">Designer Label Fragrances</a></li>
+        <li><a href="WBM.html">Wheelie Bins Master</a></li>
+        <li><a href="Index.html">Home Page</a></li>
+        <h3>Downloads</h3>
+        <li><a href="Photos/Perfume/Brochure1.png" target="_blank">DLF Brochure</a></li>
+        <li><a href="Photos/bins/WBM brocher.png" target="_blank">WBM Brochure</a></li>
+        <li><a href="Photos/Products/Clothing.png" target="_blank">QQB Clothing Brochure</a></li>
+    </div>
+    <div class="address">
+        <h3>Address</h3>
+        <p>317 Rumite Road Celtisdale EXT 30 <br>
+            Raslouw Centurion <br>
+            Guateng <br>
+            South Africa <br>
+            1097
+        </p>
+    </div>
+    <div class="terms">
+        <img src="Photos/logos2.png" alt="">
+        <p>Quote & Quick Buy</p>
+        <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <i class="fab fa-instagram"></i>
+            <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="Index.html"><i class="fas fa-globe"></i></a>
+        </div>
+        <footer>
+            <p>&copy; 2024 Quote & Quick Buy QQB. All rights reserved. <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

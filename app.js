@@ -33,10 +33,11 @@ closeCart.addEventListener('click', () => {
                         <div class="price">R${product.price}</div>
                     </div>
                     <div class="product-details" id="${product.id}">
-                        <h4>${product.items}</h4>
-                        <p>R${product.price}</p>
-                        <p>${product.color}</p>
-                        <p>${product.size}</p>   
+                        <h4>Item: ${product.items}</h4>
+                        <p>Price: R${product.price}</p>
+                        <p>Color: ${product.color}</p>
+                        <p>Size: ${product.size}</p>
+                        <p>${product.details}</p>    
                     </div>
                 </div>
                 <button class="addCart">Add To Cart</button>`;
@@ -167,7 +168,7 @@ addtoForm.onclick = function(){
     console.log(list, name, email, address);
 
     localStorage.setItem('formData', JSON.stringify({ list, name, email, address}));
-    window.location.href = 'new.html';
+    window.location.href = 'QuoteSubmit.html';
 }
 
 const initApp = () => {
