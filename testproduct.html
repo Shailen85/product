@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="products.css" rel="stylesheet">
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="navbarscript.js"></script>
+    <title>QQB-Products</title>
+  </head>
+  <body>
+    <div class="nav-body">
+        <nav>
+        <a class="logo1" href="#logo"></a>            
+        <a href="test.html">Home</a>
+
+        <!-- <a href="#Adverts">Adverts</a> -->
+        <div class="dropdown-adverts">
+            <a href="#Adverts">Adverts <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-adds">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="DLF.html">Desginer Lable Fragrances</a>
+                <a href="WBM.html">Wheelie Bin Master</a>
+            </div>
+        </div>
+        
+        <a class="logo" href="#logo"></a>
+
+        <!-- <a href="DLF.html">Downloads</a> -->
+        <div class="dropdown-downloads">
+            <a href="#Adverts">Downloads <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content-docs">
+                <!-- Add links inside the dropdown if needed -->
+                <a href="Photos/Perfume/Brochure1.png"  target="_blank">DLF Brochure</a>
+                <a href="Photos/bins/wheelibinmaster-brochure.png" target="_blank">WBM Brochure</a>
+                <a href="Photos/Products/Clothing.png"  target="_blank">Clothing Brochure</a>
+            </div>
+        </div>
+        <a href="new.html">Products</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="color: whitesmoke">
+        &#9776;
+        </a>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="title">PRODUCT LIST</div>
+        <div class="icon-cart">
+            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+            </svg>
+            <span>0</span>
+        </div>
+    </div>
+    <div class="listProduct">
+        <!-- item -->
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart" id="cartList">
+            <!-- <div class="image">
+                <img src="Photos/Products/blukg.png">
+            </div>
+            <div class="name">blues shirt</div>
+            <div class="totalPrice">R125</div>
+            <div class="quantity">
+                <span class="minus"><</span>
+                <span>1</span>
+                <span class="plus">></span>
+            </div> -->
+        </div>
+        <div class="userDetails">
+            <input type="name" id="userName" placeholder="Your Name">
+            <input type="text" id="userEmail" placeholder="Your Email">
+            <textarea placeholder="Shipping Address" class="form-control" id="userAddress" rows="4"></textarea>
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button type="submit" class="checkOut" id="check">CHECK OUT</button>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        function showDetails(productId) {
+            var productDetails = document.getElementById(productId);
+            if (productDetails.style.display === "none") {
+                productDetails.style.display = "block";
+            } else {
+                productDetails.style.display = "none";
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+    </div>
+
+    <div class="social-links">
+        <div class="contact-links">
+            <h3>Contact</h3>
+            <a href=""><i class="fab fa-facebook"></i>  facebook</a>
+            <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i> 079 882 8706</a>
+            <a href=""><i class="fab fa-instagram"></i>  instagram</a>
+            <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i> QuoteandQuickBuy@gmail.com</a>
+            <a href="Index.html"><i class="fas fa-globe"></i> www.QuoteandQuickBuy.co.za</a>
+        </div>
+        <div class="advert-links">
+            <h3>Quick Links</h3>
+            <li><a href="DLF.html">Designer Label Fragrances</a></li>
+            <li><a href="WBM.html">Wheelie Bins Master</a></li>
+            <li><a href="Index.html">Home Page</a></li>
+            <h3>Downloads</h3>
+            <li><a href="Photos/Perfume/Brochure1.png" target="_blank">DLF Brochure</a></li>
+            <li><a href="Photos/bins/WBM brocher.png" target="_blank">WBM Brochure</a></li>
+            <li><a href="Photos/Products/Clothing.png" target="_blank">QQB Clothing Brochure</a></li>
+        </div>
+        <div class="address">
+            <h3>Address</h3>
+            <p>317 Rumite Road Celtisdale EXT 30 <br>
+                Raslouw Centurion <br>
+                Guateng <br>
+                South Africa <br>
+                1097
+            </p>
+        </div>
+        <div class="terms">
+            <img src="Photos/logos2.png" alt="">
+            <p>Quote & Quick Buy</p>
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <a href="https://wa.me/0798828706" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <i class="fab fa-instagram"></i>
+                <a href="mailto:quoteandquickbuy@gmail.com"><i class="far fa-envelope"></i></a>
+                <a href="Index.html"><i class="fas fa-globe"></i></a>
+            </div>
+            <footer>
+                <p>&copy; 2024 Quote & Quick Buy QQB. All rights reserved. <a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+            </footer>
+        </div>
+    </div>
+  </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <div id="checkoutData"></div>
+    <!-- <form action="">
+        <p>Name: ${formData.name}</p>
+        <p>Email: ${formData.email}</p>
+        <p>Address: ${formData.address}</p>
+        <p>Cart Items: ${formData.list}</p>
+        <button>Submit</button>
+    </form> -->
+    <script>
+        // Retrieve form data from localStorage
+        let formData = JSON.parse(localStorage.getItem('formData'));
+        let test = JSON.parse(localStorage.getItem('cart'));
+
+        // Display form data
+        if (formData) {
+            let checkoutDataDiv = document.getElementById('checkoutData');
+            checkoutDataDiv.innerHTML = `
+            <form target="_blank" action="https://formsubmit.co/3cdb01eb17a7bba740571f146ae9b9c0" method="POST">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" name="name" class="form-control" placeholder="Full Name" value="${formData.name}">
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Email Address" value="${formData.email}">
+                        </div>
+                        <div class="col">
+                            <textarea placeholder="Shipping Address" class="form-control" name="message" rows="5" required>${formData.address}</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required>${formData.list}</textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+            </form>
+                <p>Name: ${formData.name}</p>
+                <p>Email: ${formData.email}</p>
+                <p>Address: ${formData.address}</p>
+                <p>Cart Items: ${formData.list}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

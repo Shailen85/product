@@ -5,7 +5,6 @@ let iconCartSpan = document.querySelector('.icon-cart span');
 let body = document.querySelector('body');
 let closeCart = document.querySelector('.close');
 let products = [];
-let dlfproducts = [];
 let cart = [];
 
 
@@ -27,21 +26,20 @@ closeCart.addEventListener('click', () => {
                 newProduct.dataset.id = product.id;
                 newProduct.classList.add('item');
                 newProduct.innerHTML = 
-                `<div class="product-info">
+                `<div class="productView">
                     <div class="product" onclick="showDetails('${product.id}')">
                         <img src="${product.image}" alt="">
-                        <p>${product.name}</p>
-                        <h2>R${product.price}</h2>
+                        <h2>${product.name}</h2>
+                        <div class="price">R${product.price}</div>
                     </div>
                     <div class="product-details" id="${product.id}">
                         <h4>${product.items}</h4>
                         <p>R${product.price}</p>
                         <p>${product.color}</p>
-                        <p>${product.size}</p>
-                        <p style="font-size: smaller;">${product.info}</p>
+                        <p>${product.size}</p>   
                     </div>
                 </div>
-                <!-- <button class="addCart">Add To Cart</button> -->`;
+                <button class="addCart">Add To Cart</button>`;
                 listProductHTML.appendChild(newProduct);
             });
         }
@@ -94,7 +92,7 @@ const addCartToHTML = () => {
                 <div class="name">
                 ${info.name}
                 </div>
-                <div class="totalPrice">$${info.price * item.quantity}</div>
+                <div class="totalPrice">R${info.price * item.quantity}</div>
                 <div class="quantity">
                     <span class="minus"><</span>
                     <span>${item.quantity}</span>
@@ -138,6 +136,38 @@ const changeQuantityCart = (product_id, type) => {
     }
     addCartToHTML();
     addCartToMemory();
+}
+
+//create new variable
+const newName = document.createElement('nameUser')
+const newEmail = document.createElement('emailUser')
+const newAddress = document.createElement('addressUser')
+const userChoice = document.createElement('userList')
+// create function for button
+const addtoForm = document.getElementById("check")
+addtoForm.onclick = function(){
+    //simplyfy getting values for html
+    let name = document.getElementById("userName").value
+    let email = document.getElementById("userEmail").value
+    let address = document.getElementById("userAddress").value
+    let list = document.getElementById("cartList").innerText
+    // newName.textContent = document.getElementById("userName").value
+
+    // replace variables with values
+    newName.textContent = name;
+    newEmail.textContent = email;
+    newAddress.textContent = address;
+    userChoice.textContent = list;
+
+    //append to html
+    // document.getElementById("nameUser").append(newName);
+    // document.getElementById("emailUser").append(newEmail);
+    // document.getElementById("addressUser").append(newAddress);
+    // document.getElementById("userList").append(userChoice);
+    console.log(list, name, email, address);
+
+    localStorage.setItem('formData', JSON.stringify({ list, name, email, address}));
+    window.location.href = 'new.html';
 }
 
 const initApp = () => {
