@@ -229,6 +229,55 @@ button{
     /* border: solid; */
     margin-left: 250px;
 }
+@media screen and (max-width: 600px){
+    form{
+        margin-left: 0%;
+    }
+    h1{
+        font-size: 100%;
+    }
+    .name{
+        input{
+            width: 300px;
+            margin: 2%;
+        }
+    }
+    .email{
+        input{
+            width: 300px;
+            margin: 3%;
+        }
+        p{
+            padding: 0%;
+            width: 300px;
+            /* border: solid; */
+        }
+    }
+    .message{
+        /* border: solid; */
+        width: 300px;
+        textarea{
+            /* border: solid; */
+            /* margin-left: 0px; */
+            /* height: 100px; */
+            width: 300px;
+        }
+    }
+    .order{
+        /* border: solid; */
+        width: 300px;
+        textarea{
+            /* border: solid; */
+            /* margin-left: 0px; */
+            /* height: 100px; */
+            width: 300px;
+        }
+    }
+    button{
+        width: 100px;
+        margin-left: 100px;
+    }
+}
 
 /* ----------------------------INFO--------------------------- */
 .social-links{
